@@ -46,7 +46,6 @@ public class Happy88Action {
 		network.setExtraHTTPHeaders(headers);
 		session.waitDocumentReady();
 		session.navigate("http://liveh5.happy88.com/?channel=91017");
-//		session.waitDocumentReady(30000);
 		session.wait(8000);
 		session.evaluate(
 				"document.getElementsByClassName('swiper-slide swiper-slide-duplicate swiper-slide-next')[0].click();");
