@@ -20,10 +20,10 @@ import io.webfolder.cdp.session.Session;
 import io.webfolder.cdp.session.SessionFactory;
 
 public class MiaoBoLiveAction {
-	@Test
-	public void downLoadGotoLimit(String[] args) {
+	
+	public void downLoadGotoLimit() {
 		for (int i = 0; i < 300; i++) {
-			ADSLUtil.restartADSL("宽带连接", "abcd", "1234", "gb2312");
+			ADSLUtil.restartADSL("宽带连接", "f5mgsm99m", "wdjpnphl", "utf-8");
 			System.out.println(i);
 			downLoadGoto();
 		}
@@ -53,15 +53,17 @@ public class MiaoBoLiveAction {
 
 	}
 
+	@Test
 	public void downLoadAppLimit() {
 		for (int i = 0; i < 500; i++) {
+			ADSLUtil.restartADSL("宽带连接", "f5mgsm99m", "wdjpnphl", "utf-8");
+			ExecUtil.runExec("taskkill /f /t /im chrome.exe", "utf-8");
+			System.out.println(i);
 			downLoadApp();
 		}
 	}
 
 	public void downLoadApp() {
-		ADSLUtil.restartADSL("宽带连接", "abcd", "1234", "gb2312");
-		ExecUtil.runExec("taskkill /f /t /im chrome.exe", "utf-8");
 		ArrayList<String> command = new ArrayList<String>();
 		// 不显示google 浏览器
 		command.add("--incognito");// 进入隐身模式——保证浏览网页时，不留下任何痕迹。
@@ -79,7 +81,7 @@ public class MiaoBoLiveAction {
 		Map<String, Object> headers = new HashMap<>();
 		network.setExtraHTTPHeaders(headers);
 		session.navigate(
-				"http://www.miaobolive.com/loginp.aspx?channel=6&subChannel=yaowang4&timeTicks=636454674875426890&key=AB9812E4CF66EA90BD92041398BB0EADC186990C2403BF4CD516E510CAF45524");
+				"http://www.miaobolive.com/loginp.aspx?channel=6&subChannel=yaowang&timeTicks=636449795818586187&key=AB9812E4CF66EA9075A85A8565C62C5D9B65864A7F51D51301B363BF853FAD19");
 //		session.waitDocumentReady(30000);
 		session.wait(8000);
 		session.evaluate("javascript:htmlLode.goto();");
