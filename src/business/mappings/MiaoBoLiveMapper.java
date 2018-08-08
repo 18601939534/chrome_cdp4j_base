@@ -1,6 +1,6 @@
 package business.mappings;
 
-public interface QingKaSignUpMapper {
+public interface MiaoBoLiveMapper {
 
 	public String insertOneIp();
 

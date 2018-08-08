@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import business.service.FlowDownloadService;
+import business.service.MiaoBoLiveService;
 import io.webfolder.cdp.Launcher;
 import io.webfolder.cdp.command.Network;
 import io.webfolder.cdp.session.Session;
@@ -16,7 +16,7 @@ import io.webfolder.cdp.session.SessionFactory;
 public class QQOauth2ShowAction {
 
 	public void runFlowDownload() {
-		FlowDownloadService flowDownloadService = new FlowDownloadService();
+		MiaoBoLiveService flowDownloadService = new MiaoBoLiveService();
 
 		for (int i = 0; i < 5000; i++) {
 

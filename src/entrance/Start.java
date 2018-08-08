@@ -1,11 +1,11 @@
 package entrance;
 
-import entrance.ui.Happy88GUI;
+import entrance.ui.MiaoBoLiveGUI;
 
 public class Start {
 
 	public static void main(String[] args) {
-		Happy88GUI init = new Happy88GUI();
+		MiaoBoLiveGUI init = new MiaoBoLiveGUI();
 		init.run(args);
 	}
 

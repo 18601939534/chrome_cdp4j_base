@@ -1,6 +1,6 @@
 package business.service;
 
-public class FlowDownloadService {
+public class MiaoBoLiveService {
 
 	public void runFlowDownload() {
 

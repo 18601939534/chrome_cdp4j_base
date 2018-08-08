@@ -1,6 +1,6 @@
 package entrance.ui;
 
-import business.action.QingKaSignUpAction;
+import business.action.MiaoBoLiveAction;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,7 +12,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class QingKaGUI extends Application {
+public class MiaoBoLiveGUI extends Application {
 
 	/*
 	 * start方法在于开始运行时要做的事情，通常初始化组件的
@@ -42,7 +42,7 @@ public class QingKaGUI extends Application {
 	 */
 	private void init(Stage primaryStage) throws Exception {
 		// Stage类是顶级JavaFX容器。初级阶段是由平台构建的。应用程序可以构造其他阶段对象。
-		primaryStage.setTitle("情咔自动注册程序");
+		primaryStage.setTitle("喵播");
 		Label titleLabel = new Label("实时状态：");
 		HBox titleBox = new HBox();
 		Label contentLabel = new Label("");
@@ -60,9 +60,9 @@ public class QingKaGUI extends Application {
 		primaryStage.show();
 
 		// 注册按钮
-		Button signUpBtn = new Button("访问注册开始");
+		Button signUpBtn = new Button("访问下载开始");
 		// 暂停按钮
-		Button cancelBtn = new Button("暂停注册");
+		Button cancelBtn = new Button("暂停");
 		// 布局
 		HBox btnBox = new HBox();
 		btnBox.setSpacing(10);
@@ -74,11 +74,10 @@ public class QingKaGUI extends Application {
 			@Override
 			public void handle(ActionEvent event) {
 				contentLabel.setText("自动注册按钮被点击！");
-				QingKaSignUpAction qingKaRegAction = new QingKaSignUpAction();
-				qingKaRegAction.signUpByAmount();
+				MiaoBoLiveAction happy88Action = new MiaoBoLiveAction();
+				happy88Action.downLoadAppLimit();
 				signUpBtn.setDisable(true);
 				cancelBtn.setDisable(false);
-
 			}
 		});
 

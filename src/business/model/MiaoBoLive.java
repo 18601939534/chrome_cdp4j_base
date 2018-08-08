@@ -1,5 +1,5 @@
 package business.model;
 
-public class Happy88 {
+public class MiaoBoLive {
 
 }
